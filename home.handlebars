@@ -1,0 +1,11 @@
+<h1>Our Products</h1>
+
+<div class="product-list">
+  {{#each products}}
+  <div class="product-item">
+    <img src="./images/{{this.image}}" alt="Sun Shirt" width="250" height="150" />
+    <h2>{{this.name}} - ${{this.price}}</h2>
+    <a href="/products/{{this.id}}">View Details</a>
+  </div>
+{{/each}}
+</div>

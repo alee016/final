@@ -1,0 +1,20 @@
+{
+    "name": "shopping-site",
+    "version": "1.0.0",
+    "description": "A shopping site using Node.js, Express, and Handlebars",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "@handlebars/allow-prototype-access": "^1.0.5",
+        "express": "^4.18.2",
+        "express-handlebars": "^8.0.1",
+        "mongoose": "^7.0.0"
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "author": "",
+    "license": "ISC"
+}

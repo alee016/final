@@ -1,0 +1,27 @@
+{{#extend "main"}}
+    {{#content "body"}}
+        <h2>{{customer.name}}'s Orders</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Date</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each customer.orders}}
+                    <tr>
+                        <td>{{this._id}}</td>
+                        <td>{{this.date}}</td>
+                        <td>${{this.total}}</td>
+                        <td>
+                            <a href="/admin/orders/{{this._id}}">View Details</a>
+                        </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    {{/content}}
+{{/extend}}

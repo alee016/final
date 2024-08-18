@@ -1,0 +1,22 @@
+<h1>{{product.name}}</h1>
+<img src="{{product.image}}" alt="{{product.name}}" />
+<p>{{product.description}}</p>
+<p>Price: ${{product.price}}</p>
+
+<form action="/cart/add" method="POST">
+    <input type="hidden" name="productId" value="{{product._id}}" />
+    <label for="size">Select Size:</label>
+    <div>
+        {{#each product.sizes}}
+            <input type="radio" name="size" value="{{@key}}" id="{{@key}}" required />
+            <label for="{{@key}}">{{@key}}</label>
+        {{/each}}
+    </div>
+    <label for="quantity">Select Quantity:</label>
+    <select name="quantity" id="quantity" required>
+        {{#each (range 1 10)}}
+            <option value="{{this}}">{{this}}</option>
+        {{/each}}
+    </select>
+    <button type="submit">Add to Cart</button>
+</form>

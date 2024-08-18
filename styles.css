@@ -1,0 +1,130 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  
+  gap: 20px;  
+  max-width: 1200px;  
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.product-card p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.product-card .price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+header {
+  background-color: #f8f9fa; 
+  padding: 10px; 
+  text-align: center; 
+}
+
+nav {
+  display: inline-block; 
+  border: 2px solid #007bff; 
+  border-radius: 15px; 
+  padding: 10px 20px; 
+  background-color: #fff; 
+}
+
+ul {
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+}
+
+li {
+  display: inline; 
+  margin: 0 15px; 
+}
+
+a {
+  text-decoration: none; 
+  color: #007bff; 
+  font-weight: bold; 
+}
+
+a:hover {
+  color: #0056b3; 
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.product-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.product-item h2 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0 0 10px;
+}
+
+.product-item a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.product-item a:hover {
+  color: #0056b3;
+}

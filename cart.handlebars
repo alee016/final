@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Your Cart</h1>
+    <div class="cart-items">
+        {{#each cartItems}}
+            <div class="cart-item">
+                <img src="/images/{{this.product.image}}" alt="{{this.product.name}}">
+                <h2>{{this.product.name}}</h2>
+                <p>Price: ${{this.product.price}}</p>
+                <p>Quantity: {{this.quantity}}</p>
+                <p>Total: ${{this.total}}</p> 
+            </div>
+        {{/each}}
+    </div>
+</body>
+</html>

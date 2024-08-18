@@ -1,0 +1,33 @@
+{{#extend "main"}}
+    {{#content "body"}}
+        <h2>Manage Products</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each products}}
+                    <tr>
+                        <td>{{this._id}}</td>
+                        <td>{{this.name}}</td>
+                        <td>${{this.price}}</td>
+                        <td>{{this.sizes}}</td>
+                        <td>
+                            <a href="/admin/products/edit/{{this._id}}">Edit</a>
+                            <form action="/admin/products/delete/{{this._id}}" method="post" style="display:inline;">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <a href="/admin/products/add">Add New Product</a>
+    {{/content}}
+{{/extend}}

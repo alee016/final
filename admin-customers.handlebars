@@ -1,0 +1,30 @@
+{{#extend "main"}}
+    {{#content "body"}}
+        <h2>Manage Customers</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each customers}}
+                    <tr>
+                        <td>{{this._id}}</td>
+                        <td>{{this.name}}</td>
+                        <td>{{this.email}}</td>
+                        <td>
+                            <a href="/admin/customers/{{this._id}}">View Orders</a>
+                            <form action="/admin/customers/delete/{{this._id}}" method="post" style="display:inline;">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    {{/content}}
+{{/extend}}
